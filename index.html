@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Plant Parts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        <script src="jquery.alterclass.js"></script>
+        <script src="dragscrollable.min.js"></script>
+        <link rel="stylesheet" href="plants.css">
+        <script src="plants.js"></script>
+    </head>
+    <body>
+        <div class='whole-container'>
+            <div id="instructions-dialog" title="How to play" style="display: none;">
+                Welcome to Plant Parts!
+                <p>
+                Label the parts of the plant by tapping or clicking on a textbox,
+                then typing in the correct part name. A list of the possibilities
+                is shown at the top.
+                <p>
+                When you think you have them all right, click "Check answers".
+                If you got any wrong, they will be highlighted in red so you know
+                where the mistakes are.
+                <p>
+                Let's get started! Pick a level!
+                <p>
+                <button onclick='showFlowerMode(false); $("#instructions-dialog").dialog("close");' tabindex='-1'>Easy</button>
+                <button onclick='showFlowerMode(true); $("#instructions-dialog").dialog("close");' tabindex='-1'>Hard</button>
+            </div>
+            <div id='correct-dialog' title='Awesome' style='display: none;'>
+                You really have a green thumb! Great work!
+                <p>
+                Do you want to <a href="#" onclick='window.location.reload(true);'>try a different level</a>?
+            </div>
+            <div id='incorrect-dialog' title='Oops' style='display: none;'>
+                Whoops! Looks like not all of your answers are correct.
+                <p>
+                    <button onclick='$("#incorrect-dialog").dialog("close");'>OK</button>
+            </div>
+            <p>
+            <b>Possible parts: <span id='possible-parts'></span></b>
+            <p>
+            <div id='flower-parts'>
+                <img id='flower-full' class='flower-parts-img' alt="" src='flower_parts.png'/>
+                <img id='flower-basic' class='flower-parts-img' alt="" src='flower_basic.png'/>
+                <div id='flower-basic-parts' class="flower-part-textboxes">
+                    <input class="part-label" id="stem" value="stem" tabindex='2'>
+                    <input class="part-label" id="leaf" value="leaf" tabindex='3'>
+                    <input class="part-label" id="flower" value="flower" tabindex='1'>
+                    <input class="part-label" id="roots" value="roots" tabindex='4'>
+                </div>
+                <div id='flower-full-parts' class='flower-part-textboxes'>
+                    <input class='part-label' id='stigma' value='stigma' tabindex='1'>
+                    <input class='part-label' id='style' value='style' tabindex='4'>
+                    <input class='part-label' id='petal' value='petal' tabindex='2'>
+                    <input class='part-label' id='filament' value='filament' tabindex='5'>
+                    <input class='part-label' id='anther' value='anther' tabindex='3'>
+                </div>
+            </div>
+            <p>
+            <button id='check-answers-button' tabindex='10'>Check answers</button>
+        </div>
+    </body>
+</html>

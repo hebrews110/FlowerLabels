@@ -1,0 +1,192 @@
+
+html, body, .whole-container {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+.whole-container {
+    box-sizing: border-box;
+    padding: 0 2vmin;
+    text-align: center;
+    display: inline-block;
+}
+
+#flower-parts {
+    display: inline-block;
+    position: relative;
+    max-width: 940px;
+    max-height: 70vw;
+    height: 70%;
+}
+
+@media screen and (max-height: 320px) {
+    #flower-parts {
+        max-height: 60vh;
+    }
+}
+
+@media screen and (max-height: 230px) {
+    #flower-parts {
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-height: 205px) {
+    #flower-parts {
+        max-height: 40vh;
+    }
+}
+
+#header {
+    height: 30px;
+    width: calc(100% + 4vmin);
+    margin-left: -2vmin;
+    display: block;
+    font-size: 24px;
+    background-color: #66cc00;
+    
+}
+
+.flower-parts-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#flower-basic {
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#flower-full {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.flower-part-textboxes {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.part-label {
+    position: absolute;
+    width: 11%;
+    height: 4%;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+    -webkit-appearance:     none;
+    -moz-appearance:        none;
+    -ms-appearance:         none;
+    -o-appearance:          none;
+    appearance:             none;
+    outline: none;
+}
+
+#leaf {
+    top: 43%;
+    left: 57%;
+}
+
+#flower {
+    top: 9%;
+    left: 45%;
+}
+
+#stem {
+    top: 32%;
+    left: 45%;
+}
+
+#roots {
+    top: 80%;
+    left: 50%;
+}
+
+#stigma {
+    left: 5%;
+    top: 15%;
+    width: 12%;
+}
+
+#anther {
+    left: 83.5%;
+    top: 19%;
+    width: 12%;
+}
+
+#petal {
+    left: 60%;
+    top: 0.5%;
+    height: 5.5%;
+}
+
+#filament {
+    width: 16%;
+    left: 84%;
+    top: 41%;
+}
+
+#style {
+    left: 3%;
+    top: 51%;
+}
+
+.flower-parts-img, .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.ui-widget-overlay
+{
+  opacity: .70 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=.70) !important;
+
+  background: rgb(30, 30, 30) !important; /* This will make it darker */
+}
+
+.ui-dialog-title {
+    width: 100% !important;
+}
+
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+    pointer-events: none;
+    display: none;
+}
+
+.ui-dialog {
+    max-width: 90vw;
+}
+
+.ui-dialog-content {
+    max-height: 60vh !important;
+}
+
+.part-label-incorrect {
+    background-color: tomato;
+}
