@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -27,13 +27,15 @@ $(document).ready(function() {
     showFlowerMode(false);
     $(".part-label").val("");
     $("#instructions-dialog").dialog({ modal: true });
-    
+
     $("#check-answers-button").click(function() {
         var isCorrect = true;
         var $parts = $("#flower-" + showing + "-parts").find(".part-label");
         for(var i = 0; i < $parts.length; i++) {
             var el = $parts[i];
-            if(el.id !== el.value) {
+            var answer = el.value;
+            answer = answer.toLowerCase();
+            if(el.id !== answer) {
                 if(isCorrect)
                     $("#incorrect-dialog").dialog({ modal: true });
                 isCorrect = false;
